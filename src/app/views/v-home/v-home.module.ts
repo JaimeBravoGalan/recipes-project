@@ -5,7 +5,6 @@ import { CResultsComponent } from 'src/app/components/c-results/c-results.compon
 import { CDetailsComponent } from 'src/app/components/c-details/c-details.component';
 import { VHomeComponent } from './v-home.component';
 import { SearchRecipesService } from 'src/app/services/search-recipes.service';
-
 @NgModule({
     declarations: [
         VHomeComponent,
@@ -18,7 +17,7 @@ import { SearchRecipesService } from 'src/app/services/search-recipes.service';
     ],
     
     exports: [
-        VHomeComponent
+        VHomeComponent,
     ]
 })
 

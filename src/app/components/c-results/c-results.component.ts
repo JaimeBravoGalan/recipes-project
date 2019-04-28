@@ -1,23 +1,18 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-
+import { Recipe } from 'src/app/models/recipe.model';
 @Component({
   selector: 'app-c-results',
   templateUrl: './c-results.component.html',
   styleUrls: ['./c-results.component.css']
 })
 export class CResultsComponent implements OnInit {
-  @Input() resultsList: Object[];
-  @Output() item: EventEmitter<Object> = new EventEmitter();
+  @Input() resultsList: Recipe[];
   constructor() { }
 
   ngOnInit() {
+    
   }
-  showDetailEvent(event){
-    this.item.emit(event);
-  }
-  hasResults(){
-    if(this.resultsList)
-    return this.resultsList.length>0
-    else return;
+  hasResults():boolean{
+    return this.resultsList && this.resultsList.length>0;
   }
 }

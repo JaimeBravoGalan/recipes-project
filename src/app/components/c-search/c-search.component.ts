@@ -6,17 +6,14 @@ import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output } from '
   styleUrls: ['./c-search.component.css']
 })
 export class CSearchComponent implements OnInit {
-  @Output() search: EventEmitter<string> = new EventEmitter();
 
+  @Output() updateValue: EventEmitter<string> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
-   
   }
-  searchRecipes(value:string){
-    this.search.emit(value);
+
+  updateRecipe(value:string):void{
+    this.updateValue.emit(value);
   }
-  // onKey(value:string){
-  //   console.log(value);
-  // }
 }

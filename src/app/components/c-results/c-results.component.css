@@ -9,13 +9,14 @@
 }
 
 .search-results-container .search-results-list .search-results-item:hover {
-  background: #eee;
+  background: #c3c3c3;
   cursor: pointer;
 }
 
 .search-results-container .search-results-list .search-results-item .search-result-img {
   float: left;
   margin: 0 15px 0 0;
+  border-radius: 50%;
 }
 
 .search-results-container .search-results-list .search-results-item .search-result-title {
