@@ -1,0 +1,5 @@
+<header class="header">
+    <p>Recipe Puppy</p>
+</header>
+<app-c-search (search) = "searchRecipes($event)"></app-c-search>
+<app-c-results [resultsList] = "list" (item)="showDetail($event)"></app-c-results>
