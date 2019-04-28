@@ -8,9 +8,6 @@ const routes: Routes = [
     path: 'home', component: VHomeComponent
   },
   {
-    path: 'detail', component: CDetailsComponent
-  },
-  {
     path: '', redirectTo: '/home', pathMatch: 'full'
   },
   // {

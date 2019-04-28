@@ -1,21 +1,23 @@
 <div class="row">
-  <div class="col-4 search-results"></div>
-  <div id="repo_results" class="col-4 search-results-container">
+  <div class="col-3 search-results"></div>
+  <div id="repo_results" class="col-6 search-results-container">
     <ul class="search-results-list">
       <div *ngIf="!hasResults()">
         <div class="alert alert-danger alert-style" role="alert">No results</div>
       </div>
-      <li *ngFor="let item of resultsList" class="search-results-item" (click)="showDetailEvent(item)">
-        <ng-container *ngIf="item.thumbnail; else elseTemplate">
-            <img width="200" height="200" class="search-result-img" src="{{item.thumbnail}}"/>
-        </ng-container>
-        <ng-template #elseTemplate>
-            <img width="200" height="200" class="search-result-img" src="assets/no-dish-thumbnail.jpg"/>
-        </ng-template>
-        <h3 class="search-result-title">{{item.title}}</h3>
-        <p class="search-result-description" >{{item.ingredients}}</p>
-      </li>
+        <li *ngFor="let item of resultsList" class="search-results-item">
+          <a href="{{item.href}}"  style="text-decoration:none">
+            <ng-container *ngIf="item.thumbnail; else elseTemplate">
+                <img width="200" height="200" class="search-result-img" src="{{item.thumbnail}}"/>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <img width="200" height="200" class="search-result-img" src="assets/no-dish-thumbnail.jpg"/>
+            </ng-template>
+            <h3 class="search-result-title">{{item.title}}</h3>
+            <p class="search-result-description" >{{item.ingredients}}</p>
+          </a>
+        </li>
     </ul>
   </div>
-  <div class="col-4"></div>
+  <div class="col-3"></div>
 </div>

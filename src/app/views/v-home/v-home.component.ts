@@ -17,8 +17,4 @@ export class VHomeComponent implements OnInit {
       this.list = e.results;
     });
   }
-  showDetail($event:Object){
-    console.log($event);
-    this.router.navigate(['/detail'])
-  }
 }

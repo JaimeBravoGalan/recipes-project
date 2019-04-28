@@ -1,5 +1,6 @@
 .search-results-container .search-results-list {
   list-style-type: none;
+  text-align: center;
 }
 
 .search-results-container .search-results-list .search-results-item {
@@ -18,11 +19,13 @@
 }
 
 .search-results-container .search-results-list .search-results-item .search-result-title {
-  font-size: 30px
+  font-size: 30px;
+  color: #393D42;
 }
 
 .search-results-container .search-results-list .search-results-item .search-result-description {
   font-size: 18px;
+  color: black;
 }
 
 .alert-style {
