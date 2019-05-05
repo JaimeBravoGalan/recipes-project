@@ -15,6 +15,9 @@ export class VHomeComponent implements OnInit {
   constructor(private searchRecipesService: SearchRecipesService) { }
 
   ngOnInit():void {
+    this.getRecipes();
+  }
+  getRecipes():void{
     this.recipes$ = this.searchRecipesTerms.pipe(
       debounceTime(300),
       distinctUntilChanged(),
